@@ -1,0 +1,15 @@
+// filename: tsconfig.json
+{
+  "compilerOptions": {
+    "target": "ES2022",
+    "module": "ESNext",
+    "moduleResolution": "bundler",      // matches how Vite resolves imports
+    "lib": ["ES2022", "DOM", "DOM.Iterable"],
+    "types": ["vite/client"],           // gives us import.meta.env and import.meta.glob
+    "strict": true,                     // turn on all strict checks
+    "noUncheckedIndexedAccess": true,   // array[0] may be undefined, so check it
+    "skipLibCheck": true,
+    "noEmit": true                      // Vite builds; tsc only checks
+  },
+  "include": ["src"]
+}

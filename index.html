@@ -1,0 +1,52 @@
+<!-- filename: index.html -->
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Aurora Studio</title>
+    <meta name="description" content="Aurora Studio: an immersive 3D portfolio built with Three.js and GSAP." />
+    <link rel="stylesheet" href="/src/styles.css" />
+  </head>
+  <body>
+    <!-- Lets keyboard users jump past the nav -->
+    <a class="skip-link" href="#work">Skip to content</a>
+
+    <!-- Decorative 3D layer; hidden from screen readers -->
+    <canvas id="stage" aria-hidden="true"></canvas>
+
+    <header class="site-header">
+      <span class="logo">Aurora</span>
+      <nav aria-label="Primary">
+        <a href="#work">Work</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero" id="top">
+        <h1 data-reveal>Light, motion, depth.</h1>
+        <p data-reveal>Feel like places you can walk into.</p>
+      </section>
+
+      <section class="section" id="work">
+        <h2 data-reveal>Selected work</h2>
+        <!-- Filled by src/features/content.ts in Section 10 -->
+        <div id="cards" class="cards"></div>
+      </section>
+
+      <section class="section" id="about">
+        <h2 data-reveal>About</h2>
+        <p data-reveal>A tiny studio exploring WebGL, scroll storytelling and accessible motion.</p>
+      </section>
+
+      <section class="section" id="contact">
+        <h2 data-reveal>Say hello</h2>
+        <p><a href="mailto:hello@example.com">hello@example.com</a></p>
+      </section>
+    </main>
+
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>
